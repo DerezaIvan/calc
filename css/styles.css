@@ -1,0 +1,203 @@
+/*
+colors
+
+bg:       #DAF0FF;
+bg-calc:  #F7F8FB;
+default:  #858585;
+dark:     #424242;
+
+blue-200: #ADE2FF;
+blue-400: #7CC9FF;
+blue-600: #38B9FF;
+blue-900: #109DFF;
+
+orange-200: #f88a69;
+orange-400: #F1754E
+orange-600: #FB5825;
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #858585;
+    font-size: 32px;
+    line-height: 48px;
+    background-color: #DAF0FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calc {
+    padding: 40px 33px;
+    position: relative;
+    width: 375px;
+    height: 812px;
+    background-color: #F7F8FB;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.calc::before {
+    content: '';
+    position: absolute;
+    width: 357px;
+    height: 875px;
+    top: 105px;
+    left: 125px;
+    background-color: rgba(96, 190, 255, 0.55);
+    filter: blur(61.5px);
+    border-radius: 40px;
+    z-index: -1;
+}
+
+.calc-screen {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.theme-btn {
+    background-color: transparent;
+    fill: #858585;
+    border: none;
+    padding: 0;
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: fill .3s ease-in-out;
+}
+
+.dark-theme:hover {
+    fill: #F1754E;
+}
+
+.light-theme {
+    fill: white;
+    display: none;
+}
+
+.light-theme:hover {
+    fill: #38B9FF
+}
+
+.buttons {
+    color: #38B9FF;
+    display: flex;
+    column-gap: 20px;
+}
+
+.buttons-left {
+    max-width: 226px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 3;
+    gap: 20px;
+}
+
+.buttons-inner {
+    width: 100%;
+    display: flex;
+    column-gap: 20px;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background-color: linear-gradient(129.7deg, rgba(255, 255, 255, 0.6) -9.69%, rgba(255, 255, 255, 0.4) 114.23%);
+    border: 1px solid white;
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #38B9FF;
+    border-color: #38B9FF;
+}
+
+.btn-default-color {
+    color: #858585;
+    fill: #858585;
+    transition: fill .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+.btn-default-color:hover {
+    color: white;
+    fill: white;
+    background-color: #858585;
+    border-color: #858585;
+}
+
+.btn-bg-blue-200 {
+    background-color: #ADE2FF;
+    color: #109DFF;
+    fill: #109DFF;
+    transition: fill .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+.btn-bg-blue-200:hover {
+    fill: white;
+    color: white;
+    background-color: #38B9FF;
+    border-color: #38B9FF;
+}
+
+.backspace svg {
+    transform: translateX(-3px);
+}
+
+.zero {
+    max-width: 144px;
+    width: 100%;
+}
+
+.buttons-right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 19px;
+}
+
+.equal {
+    color: #B2DAFF;
+    background-color: #1991FF;
+    height: 107px;
+}
+
+.plus {
+    height: 96px;
+}
+
+.calc-result {
+    font-size: 48px;
+    line-height: 72px;
+    color: #424242;
+}
+
+.calc-values {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #818181;
+}
